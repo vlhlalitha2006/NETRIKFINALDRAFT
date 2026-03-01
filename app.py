@@ -308,7 +308,7 @@ def sidebar_nav() -> str:
             "Testing Guide",
         ]
         
-        if st.session_state.get("user") and st.session_state["user"].get("role") == "employee":
+        if st.session_state.get("user") and st.session_state["user"].get("role") == "admin":
             sections.append("All Applications")
 
         return option_menu(
@@ -755,7 +755,7 @@ def page_testing_guide() -> None:
 
 def page_all_applications() -> None:
     st.subheader("All Applications")
-    st.markdown("This section is restricted to **Employee** users. Here you can monitor all customer applications and their status.")
+    st.markdown("This section is restricted to **Admin** users. Here you can monitor all customer applications and their status.")
     
     with session_scope() as session:
         # Filter for customers only as requested
@@ -780,7 +780,7 @@ def page_registration() -> None:
         email = st.text_input("Email")
         password = st.text_input("Password", type="password")
         confirm_password = st.text_input("Confirm Password", type="password")
-        role = st.selectbox("I am a:", options=["Customer", "Employee"])
+        role = st.selectbox("I am a:", options=["Customer", "Admin"])
         submit = st.form_submit_button("Register")
         
         if submit:

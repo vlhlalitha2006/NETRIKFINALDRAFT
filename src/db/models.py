@@ -14,7 +14,7 @@ class User(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
     password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
-    role: Mapped[str] = mapped_column(String(32), default="customer", nullable=False) # 'customer' or 'employee'
+    role: Mapped[str] = mapped_column(String(32), default="customer", nullable=False) # 'customer' or 'admin'
     loan_status: Mapped[str] = mapped_column(String(32), default="Pending", nullable=False)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
