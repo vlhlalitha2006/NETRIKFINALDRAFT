@@ -1,0 +1,19 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# NOTE: Temporary CI/runtime workaround:
+# Debian mirror fetch for libpq-dev can hang in this environment.
+# psycopg[binary] from requirements is used for DB connectivity.
+
+COPY . /app
+
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements/api.txt
+
+EXPOSE 8000
+
+ENV PYTHONUNBUFFERED=1
+
+# JWT_SECRET and DATABASE_URL are injected at runtime.
+CMD ["uvicorn", "src.serving.app:app", "--host", "0.0.0.0", "--port", "8000"]

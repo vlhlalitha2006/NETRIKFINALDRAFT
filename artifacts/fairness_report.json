@@ -1,0 +1,185 @@
+{
+  "dataset": "data/raw/TRAIN.csv",
+  "num_samples": 614,
+  "global_metrics": {
+    "approval_rate": 0.758957654723127,
+    "rejection_rate": 0.24104234527687296,
+    "false_positive_rate": 0.265625,
+    "false_negative_rate": 0.016587677725118485
+  },
+  "group_metrics": {
+    "Gender": [
+      {
+        "group": "Gender",
+        "value": "Female",
+        "sample_size": 112,
+        "approval_rate": 0.7142857142857143,
+        "rejection_rate": 0.2857142857142857,
+        "false_positive_rate": 0.21621621621621623,
+        "false_negative_rate": 0.04
+      },
+      {
+        "group": "Gender",
+        "value": "Male",
+        "sample_size": 489,
+        "approval_rate": 0.7689161554192229,
+        "rejection_rate": 0.2310838445807771,
+        "false_positive_rate": 0.2733333333333333,
+        "false_negative_rate": 0.011799410029498525
+      },
+      {
+        "group": "Gender",
+        "value": "Unknown",
+        "sample_size": 13,
+        "approval_rate": 0.7692307692307693,
+        "rejection_rate": 0.23076923076923078,
+        "false_positive_rate": 0.4,
+        "false_negative_rate": 0.0
+      }
+    ],
+    "Married": [
+      {
+        "group": "Married",
+        "value": "No",
+        "sample_size": 213,
+        "approval_rate": 0.6901408450704225,
+        "rejection_rate": 0.30985915492957744,
+        "false_positive_rate": 0.21518987341772153,
+        "false_negative_rate": 0.029850746268656716
+      },
+      {
+        "group": "Married",
+        "value": "Unknown",
+        "sample_size": 3,
+        "approval_rate": 1.0,
+        "rejection_rate": 0.0,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 0.0
+      },
+      {
+        "group": "Married",
+        "value": "Yes",
+        "sample_size": 398,
+        "approval_rate": 0.7939698492462312,
+        "rejection_rate": 0.20603015075376885,
+        "false_positive_rate": 0.3008849557522124,
+        "false_negative_rate": 0.010526315789473684
+      }
+    ],
+    "Dependents": [
+      {
+        "group": "Dependents",
+        "value": "0",
+        "sample_size": 345,
+        "approval_rate": 0.7652173913043478,
+        "rejection_rate": 0.23478260869565218,
+        "false_positive_rate": 0.2897196261682243,
+        "false_negative_rate": 0.02100840336134454
+      },
+      {
+        "group": "Dependents",
+        "value": "1",
+        "sample_size": 102,
+        "approval_rate": 0.7156862745098039,
+        "rejection_rate": 0.28431372549019607,
+        "false_positive_rate": 0.2222222222222222,
+        "false_negative_rate": 0.015151515151515152
+      },
+      {
+        "group": "Dependents",
+        "value": "2",
+        "sample_size": 101,
+        "approval_rate": 0.8316831683168316,
+        "rejection_rate": 0.16831683168316833,
+        "false_positive_rate": 0.32,
+        "false_negative_rate": 0.0
+      },
+      {
+        "group": "Dependents",
+        "value": "3+",
+        "sample_size": 51,
+        "approval_rate": 0.7058823529411765,
+        "rejection_rate": 0.29411764705882354,
+        "false_positive_rate": 0.2222222222222222,
+        "false_negative_rate": 0.030303030303030304
+      },
+      {
+        "group": "Dependents",
+        "value": "Unknown",
+        "sample_size": 15,
+        "approval_rate": 0.6,
+        "rejection_rate": 0.4,
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 0.0
+      }
+    ],
+    "Property_Area": [
+      {
+        "group": "Property_Area",
+        "value": "Rural",
+        "sample_size": 179,
+        "approval_rate": 0.6759776536312849,
+        "rejection_rate": 0.3240223463687151,
+        "false_positive_rate": 0.21739130434782608,
+        "false_negative_rate": 0.03636363636363636
+      },
+      {
+        "group": "Property_Area",
+        "value": "Semiurban",
+        "sample_size": 233,
+        "approval_rate": 0.8412017167381974,
+        "rejection_rate": 0.15879828326180256,
+        "false_positive_rate": 0.35185185185185186,
+        "false_negative_rate": 0.0111731843575419
+      },
+      {
+        "group": "Property_Area",
+        "value": "Urban",
+        "sample_size": 202,
+        "approval_rate": 0.7376237623762376,
+        "rejection_rate": 0.2623762376237624,
+        "false_positive_rate": 0.2463768115942029,
+        "false_negative_rate": 0.007518796992481203
+      }
+    ]
+  },
+  "alerts": [
+    {
+      "group": "Married",
+      "value": "Unknown",
+      "metric": "approval_rate",
+      "group_value_metric": 1.0,
+      "global_metric": 0.758957654723127,
+      "absolute_difference": 0.24104234527687296,
+      "threshold": 0.15
+    },
+    {
+      "group": "Married",
+      "value": "Unknown",
+      "metric": "false_positive_rate",
+      "group_value_metric": 0.0,
+      "global_metric": 0.265625,
+      "absolute_difference": 0.265625,
+      "threshold": 0.15
+    },
+    {
+      "group": "Dependents",
+      "value": "Unknown",
+      "metric": "approval_rate",
+      "group_value_metric": 0.6,
+      "global_metric": 0.758957654723127,
+      "absolute_difference": 0.15895765472312706,
+      "threshold": 0.15
+    },
+    {
+      "group": "Dependents",
+      "value": "Unknown",
+      "metric": "false_positive_rate",
+      "group_value_metric": 0.0,
+      "global_metric": 0.265625,
+      "absolute_difference": 0.265625,
+      "threshold": 0.15
+    }
+  ],
+  "alert_threshold": 0.15
+}
