@@ -114,11 +114,22 @@ def inject_css() -> None:
         }
         
         /* Buttons */
-        .stButton>button {
+        .stButton>button, 
+        div[data-testid="stFormSubmitButton"]>button {
             border-radius: 10px !important;
-            background-color: #3b82f6 !important;
-            color: white !important;
-            font-weight: 600 !important;
+            background-color: #ffffff !important;
+            color: #2563eb !important;
+            border: 1px solid #2563eb !important;
+            font-weight: 700 !important;
+            width: auto !important;
+            padding: 0.5rem 2rem !important;
+        }
+        
+        .stButton>button:hover,
+        div[data-testid="stFormSubmitButton"]>button:hover {
+            background-color: #f8faff !important;
+            border-color: #1d4ed8 !important;
+            color: #1d4ed8 !important;
         }
         
         /* Metrics and Streamlit Elements Visibility */
